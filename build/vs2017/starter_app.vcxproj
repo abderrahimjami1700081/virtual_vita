@@ -138,6 +138,10 @@
       <AdditionalDependencies>gef.lib;libpng.lib;zlib.lib;gef_d3d11.lib;gef_win32.lib;d3d11.lib;d3dcompiler.lib;dxgi.lib;dxguid.lib;dinput8.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>../../build/vs2017/$(Platform)/$(Configuration)/</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -205,7 +209,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Enemy.cpp" />
     <ClCompile Include="..\..\GameObject.cpp" />
+    <ClCompile Include="..\..\GameObjectMy.cpp" />
+    <ClCompile Include="..\..\Level1.cpp" />
+    <ClCompile Include="..\..\load_texture.cpp" />
     <ClCompile Include="..\..\main_d3d11.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|PSVita'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|PSVita'">true</ExcludedFromBuild>
@@ -216,8 +224,15 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\OptionsState.cpp" />
     <ClCompile Include="..\..\primitive_builder.cpp" />
+    <ClCompile Include="..\..\SplashScreenState.cpp" />
     <ClCompile Include="..\..\starter_app.cpp" />
+    <ClCompile Include="..\..\StateBase.cpp" />
+    <ClCompile Include="..\..\StateInfo.cpp" />
+    <ClCompile Include="..\..\StateMenu.cpp" />
+    <ClCompile Include="..\..\Tower01.cpp" />
+    <ClCompile Include="..\..\TowerProjectile.cpp" />
     <ClCompile Include="..\..\VirtualMarker.cpp" />
     <ClCompile Include="..\..\VirtualObject.cpp" />
     <ClCompile Include="..\..\VirtualSystem.cpp" />
@@ -236,9 +251,20 @@
     <ClCompile Include="..\..\VirtualVita.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Enemy.h" />
     <ClInclude Include="..\..\GameObject.h" />
+    <ClInclude Include="..\..\GameObjectMy.h" />
+    <ClInclude Include="..\..\Level1.h" />
+    <ClInclude Include="..\..\load_texture.h" />
+    <ClInclude Include="..\..\OptionsState.h" />
     <ClInclude Include="..\..\primitive_builder.h" />
+    <ClInclude Include="..\..\SplashScreenState.h" />
     <ClInclude Include="..\..\starter_app.h" />
+    <ClInclude Include="..\..\StateBase.h" />
+    <ClInclude Include="..\..\StateInfo.h" />
+    <ClInclude Include="..\..\StateMenu.h" />
+    <ClInclude Include="..\..\Tower01.h" />
+    <ClInclude Include="..\..\TowerProjectile.h" />
     <ClInclude Include="..\..\VirtualMarker.h" />
     <ClInclude Include="..\..\VirtualObject.h" />
     <ClInclude Include="..\..\VirtualSonySample.h" />

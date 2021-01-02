@@ -19,6 +19,12 @@
     <Filter Include="Source Files\VirtualSystem">
       <UniqueIdentifier>{2f0d3681-b5e9-49dd-9591-72e81eaa2510}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\MyClassesHeaders">
+      <UniqueIdentifier>{9107a9b2-99e4-43e2-a2cc-b35d4d22aab8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MyClassesCpp">
+      <UniqueIdentifier>{721f3264-3fab-4dfc-b308-ffd3ff118d38}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\main_d3d11.cpp">
@@ -54,6 +60,39 @@
     <ClCompile Include="..\..\VirtualSystem_win32.cpp">
       <Filter>Source Files\VirtualSystem</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Enemy.cpp">
+      <Filter>Source Files\MyClassesCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\GameObjectMy.cpp">
+      <Filter>Source Files\MyClassesCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Level1.cpp">
+      <Filter>Source Files\MyClassesCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\load_texture.cpp">
+      <Filter>Source Files\MyClassesCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\OptionsState.cpp">
+      <Filter>Source Files\MyClassesCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SplashScreenState.cpp">
+      <Filter>Source Files\MyClassesCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\StateBase.cpp">
+      <Filter>Source Files\MyClassesCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\StateInfo.cpp">
+      <Filter>Source Files\MyClassesCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\StateMenu.cpp">
+      <Filter>Source Files\MyClassesCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Tower01.cpp">
+      <Filter>Source Files\MyClassesCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TowerProjectile.cpp">
+      <Filter>Source Files\MyClassesCpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\primitive_builder.h">
@@ -88,6 +127,39 @@
     </ClInclude>
     <ClInclude Include="..\..\VirtualSystem_vita.h">
       <Filter>Header Files\VirtualSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Enemy.h">
+      <Filter>Header Files\MyClassesHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GameObjectMy.h">
+      <Filter>Header Files\MyClassesHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Level1.h">
+      <Filter>Header Files\MyClassesHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\load_texture.h">
+      <Filter>Header Files\MyClassesHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\OptionsState.h">
+      <Filter>Header Files\MyClassesHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SplashScreenState.h">
+      <Filter>Header Files\MyClassesHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\StateBase.h">
+      <Filter>Header Files\MyClassesHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\StateInfo.h">
+      <Filter>Header Files\MyClassesHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\StateMenu.h">
+      <Filter>Header Files\MyClassesHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Tower01.h">
+      <Filter>Header Files\MyClassesHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TowerProjectile.h">
+      <Filter>Header Files\MyClassesHeaders</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

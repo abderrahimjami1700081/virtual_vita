@@ -9,7 +9,20 @@
 #include <vector>
 #include <graphics/mesh_instance.h>
 #include "primitive_builder.h"
-#include "GameObject.h"
+#include "GameObjectMy.h"
+
+
+//Bullet Includes
+#include "Enemy.h"
+#include "Tower01.h"
+
+//Menu includes
+#include "StateBase.h"
+#include "SplashScreenState.h"
+#include "StateMenu.h"
+#include "OptionsState.h"
+#include "Level1.h"
+
 
 // FRAMEWORK FORWARD DECLARATIONS
 namespace gef
@@ -51,10 +64,10 @@ private:
 	bool IsColliding_SphereToSphere ( const gef::MeshInstance& meshInstance1, const gef::MeshInstance& meshInstance2 );
 	bool IsColliding_AABBToAABB ( const gef::MeshInstance& meshInstance1, const gef::MeshInstance& meshInstance2 );
 
-	gef::SpriteRenderer* sprite_renderer_;
-	gef::Renderer3D* renderer_3d_;
-	gef::InputManager* input_manager_;
-	gef::Font* font_;
+	//gef::SpriteRenderer* sprite_renderer_;
+	//gef::Renderer3D* renderer_3d_;
+	//gef::InputManager* input_manager_;
+	//gef::Font* font_;
 
 	float fps_;
 
@@ -65,7 +78,7 @@ private:
 	float near_plane_;
 	float far_plane_;
 
-	GameObject* testObject_;
+	GameObjectMy* testObject_;
 
 
 	VirtualSystem* virtualSystem_;
@@ -73,6 +86,17 @@ private:
 	bool isColliding;
 
 	PrimitiveBuilder* primitive_builder_;
+	////// Menu State //////
+
+	StateBase *Current_State;
+	StateBase *getState(StateBase::EStates stateEnum);
+	SplashScreenState Splash_Screen_State;
+	StateMenu Menu_State;
+	OptionsState OptionsState;
+	Level1 Level1State;
+	void UpdateGameStateMachine(float frame_time);
+
+
 };
 
 #endif // _STARTER_APP_H
