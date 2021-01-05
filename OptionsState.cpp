@@ -2,6 +2,7 @@
 #include <starter_app.h>
 #include <audio/audio_manager.h>
 #include "StateInfo.h"
+#include <input/keyboard.h>
 
 
 
@@ -98,11 +99,104 @@ StateBase::EStates OptionsState::Update(float frame_time)
 
 
 	}
+
+	if (stateInfo->input_manager_)
+	{
+		stateInfo->input_manager_->Update();
+
+
+		// keyboard input
+		gef::Keyboard* keyboard = stateInfo->input_manager_->keyboard();
+
+		if (keyboard)
+		{
+			// the following if statements are to control the options in the menu
+			if (keyboard->IsKeyReleased(gef::Keyboard::KC_S))
+			{
+				menuChoice++;
+			}
+
+			if (keyboard->IsKeyReleased(gef::Keyboard::KC_W))
+			{
+				menuChoice--;
+			}
+
+			if (keyboard->IsKeyReleased(gef::Keyboard::KC_RETURN) || keyboard->IsKeyReleased(gef::Keyboard::KC_SPACE))
+			{
+
+				switch (menuChoice)
+				{
+				case 0:
+					// the following switch statement sets the difficulty based on what is already on the screen
+					//switch (g_state_init_info_->DifficultyLvl)
+					//{
+					//case EASY: g_state_init_info_->setDifficulyLevel(NORMAL);
+					//	break;
+					//case NORMAL: g_state_init_info_->setDifficulyLevel(HARD);
+					//	break;
+					//case HARD: g_state_init_info_->setDifficulyLevel(EASY);
+					//	break;
+
+					//default:
+					//	break;
+					//}
+					//break;
+				case 1:
+					//// switch statement to set the bike colour
+					//switch (g_state_init_info_->bike_color)
+					//{
+					//case GREY: g_state_init_info_->setBikeColor(RED);
+					//	break;
+					//case RED: g_state_init_info_->setBikeColor(GREY);
+					//	break;
+					//default:
+					//	break;
+					//}
+					//break;
+				case 2:
+					// Music if statement
+					//if (g_state_init_info_->isMusicOn)
+					//{
+					//	g_state_init_info_->audio_manager->StopMusic();
+					//	g_state_init_info_->isMusicOn = false;
+					//}
+					//else
+					//{
+					//	g_state_init_info_->audio_manager->PlayMusic();
+					//	g_state_init_info_->isMusicOn = true;
+
+					//}
+					//break;
+				case 3:
+					// third case if to go back to the main menu
+					return StateBase::EStates::MENU_STATE;
+					break;
+				default:
+					break;
+				}
+
+			}
+
+			if (menuChoice > 3)
+				menuChoice = 0;
+			if (menuChoice < 0)
+				menuChoice = 3;
+
+
+		}
+	}
+
+
 	return StateBase::EStates::OPTIONS_STATE;
 }
 
 void OptionsState::CleanUp()
 {
+	delete background_;
+	background_ = NULL;
+	delete Yellow_Button_Text;
+	Yellow_Button_Text = NULL;
+
 }
 
 void OptionsState::Render()

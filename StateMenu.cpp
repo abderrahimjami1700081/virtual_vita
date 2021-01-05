@@ -2,7 +2,7 @@
 #include "StateInfo.h"
 #include <input/input_manager.h>
 #include <starter_app.h>
-
+#include "input/keyboard.h"
 //#include "load_texture.h"
 
 
@@ -68,9 +68,53 @@ StateBase::EStates StateMenu::Update(float frame_time)
 
 		}
 
-		// 
-		return StateBase::EStates::MENU_STATE;
 	}
+	if (stateInfo->input_manager_)
+	{
+		stateInfo->input_manager_->Update();
+
+
+		// keyboard input
+		gef::Keyboard* keyboard = stateInfo->input_manager_->keyboard();
+
+		if (keyboard)
+		{
+			// the following if statements are to control the options in the menu
+			if (keyboard->IsKeyDown(gef::Keyboard::KC_S))
+			{
+				menuChoice++;
+			}
+
+			if (keyboard->IsKeyDown(gef::Keyboard::KC_W))
+			{
+				menuChoice--;
+			}
+
+			if (keyboard->IsKeyDown(gef::Keyboard::KC_RETURN))
+			{
+
+				// I set up a switch to check whether the state machine needs to go to the lvl1 stato or option's menu state
+				switch (menuChoice)
+				{
+					case 0: return StateBase::EStates::LEVEL1_STATE;
+						break;
+				case 1: return StateBase::EStates::OPTIONS_STATE;
+					break;
+				default:
+					break;
+				}
+
+
+				// this if statements clamp the values menuChoice can have
+				if (menuChoice > 1)
+					menuChoice = 0;
+				if (menuChoice < 0)
+					menuChoice = 1;
+			}
+		}
+	}
+	// 
+	return StateBase::EStates::MENU_STATE;
 
 }
 

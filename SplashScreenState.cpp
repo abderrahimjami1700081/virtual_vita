@@ -47,7 +47,7 @@ StateBase::EStates SplashScreenState::Update(float frame_time)
 		{
 			if (keyboard->IsKeyDown(gef::Keyboard::KC_SPACE))
 				return StateBase::EStates::MENU_STATE;
-			{ }
+
 		}
 
 	}

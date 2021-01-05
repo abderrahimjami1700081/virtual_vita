@@ -65,6 +65,17 @@ private:
 	gef::Mesh* GetFirstMesh(gef::Scene* scene);
 	bool sampleIsMarkerFound(int idx);
 	void sampleGetTransform(int idx, gef::Matrix44* mat);
+	void DrawHUD();
+	void SetupCamera();
+	void UpdateTheCamera();
+	gef::Vector4 camera_eye_;	
+	gef::Vector4 camera_lookat_;
+	gef::Vector4 camera_up_;
+	float camera_fov_;
+	float near_plane_;
+	float far_plane_;
+
+
 
 
 	gef::Matrix44 OrthoMatrix;
@@ -97,9 +108,6 @@ private:
 	gef::MeshInstance cube;
 	float fps_;
 
-	//Mesh instance  
-	gef::MeshInstance importedModelInstance_;
-	class gef::Mesh* importedModelMesh_;
 
 	gef::Scene* model_scene_;
 
@@ -115,5 +123,10 @@ private:
 	//Virtual Vita
 	VirtualSystem* virtualSystem_;
 
+
+	///////////////////// Variables for storing map model
+	//Mesh instance  
+	GameObjectMy importedModelInstance_;
+	class gef::Mesh* importedModelMesh_;
 };
 

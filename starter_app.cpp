@@ -465,7 +465,7 @@ StateBase * StarterApp::getState(StateBase::EStates stateEnum)
 		return &Splash_Screen_State;
 	case StateBase::EStates::OPTIONS_STATE:
 		return &OptionsState;
-	case StateBase::EStates::LEVEL1:
+	case StateBase::EStates::LEVEL1_STATE:
 		return &Level1State;
 
 		break;
