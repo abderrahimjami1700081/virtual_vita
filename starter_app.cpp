@@ -62,7 +62,7 @@ void StarterApp::Init()
 
 	// FONT
 	stateInfo->font_ = new gef::Font(platform_);
-	stateInfo->font_->Load("comic_sans");
+	stateInfo->font_->Load("Font/Big-Holidays");
 
 	// INPUT MANAGER
 	stateInfo->input_manager_ = gef::InputManager::Create(platform_);
@@ -277,8 +277,8 @@ bool StarterApp::Update(float frame_time)
 
 	StateInitInfo* stateInfo = StateInitInfo::getInstance();
 
-	// Updating the input manager
-	stateInfo->input_manager_->Update();
+	//// Updating the input manager
+	//stateInfo->input_manager_->Update();
 
 	UpdateGameStateMachine(frame_time);
 	return true;

@@ -7,8 +7,8 @@
 #include <graphics/sprite_renderer.h>
 #include <graphics/font.h>
 #include "primitive_builder.h"
-
-
+#include "input/keyboard.h"
+#include "input/input_manager.h"
 namespace gef
 {
 	class SonyController;

@@ -2,6 +2,7 @@
 #include "StateBase.h"
 #include <graphics/sprite.h>
 #include <load_texture.h>
+#include <maths/math_utils.h>
 class SplashScreenState :
 	public StateBase
 {
@@ -19,16 +20,30 @@ public:
 private:
 
 	float lerp(float _a, float _b, float _t);
-
+	float EasoutElastic(float x);
+	float easeInSine(float x);
 	gef::Texture* checker_texture_;
 	gef::Sprite checker_sprite_;
+
+	gef::Texture* logo_Background_texture_;
+	gef::Sprite logo_Background_sprite_;
+
+	gef::Texture* logo_Background_Shadow_texture_;
+	gef::Sprite logo_Background_Shadow_sprite_;
 
 	gef::Texture* logo_texture_;
 	gef::Sprite logo_sprite_;
 
 	float logo_Y_pos;
 	float text_Y_pos;
+	float rotationIncrement;
 
+	float logoWidth, logoHeight;
+	bool isLogoExpanded;
+	float logoExpansionLerpRate;
+	float logoMaxExpansionDimention;
+	float TextYPos;
+	float TextYfinalPos;
 
 };
 

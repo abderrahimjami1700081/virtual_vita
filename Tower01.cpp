@@ -44,7 +44,7 @@ void Tower01::Update(float frameTime)
 
 }
 
-void Tower01::ShootProjectile(gef::Matrix44 globalTargetTransform)
+void Tower01::ShootProjectile(gef::Matrix44 globalTargetTransform, gef::Vector4 TargetVelocity)
 {
 	gef::Matrix44 InverseOfMarkerTransform, temp3;
 	InverseOfMarkerTransform.AffineInverse(markerTranform);

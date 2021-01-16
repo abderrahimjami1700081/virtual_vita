@@ -234,7 +234,7 @@ void VirtualSystemWin32::ProcessKeyboardInput ( gef::Keyboard* keyboard, float f
 
 		}
 
-		if (keyboard->IsKeyPressed ( gef::Keyboard::KC_M ))
+		if (keyboard->IsKeyPressed( gef::Keyboard::KC_M ))
 		{
 			// remove current marker
 			for (int i = 0; i < markers_.size (); i++)
@@ -248,9 +248,9 @@ void VirtualSystemWin32::ProcessKeyboardInput ( gef::Keyboard* keyboard, float f
 			}
 		}
 
-		useWideCamera = (keyboard->IsKeyDown ( gef::Keyboard::KC_LSHIFT ));
+		useWideCamera = (keyboard->IsKeyDown( gef::Keyboard::KC_LSHIFT ));
 
-		if (keyboard->IsKeyPressed ( gef::Keyboard::KC_SPACE ))
+		if (keyboard->IsKeyPressed( gef::Keyboard::KC_SPACE ))
 		{
 			AdvanceControl ();
 		}

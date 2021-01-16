@@ -17,7 +17,7 @@
 #include <graphics/renderer_3d.h>
 #include <graphics/render_target.h>
 #include <graphics/scene.h>
-
+#include <input/keyboard.h>
 #include <input/input_manager.h>
 //#include <sony_sample_framework.h>
 //#include <sony_tracking.h>
@@ -336,8 +336,6 @@ StateBase::EStates Level1::Update(float frame_time)
 			{
 				tower->GetBullet()->velocity_ = gef::Vector4(0.0f, 0.0f, 0.0f);
 			}
-			else
-				tower->ShootProjectile(enemy.localTransform_ * markerTransform);
 
 
 		}
@@ -346,6 +344,7 @@ StateBase::EStates Level1::Update(float frame_time)
 			isTowerSphereColliding = false;
 		}
 
+		//tower->ShootProjectile(enemy.localTransform_ * markerTransform);
 	}
 
 	//dynamicsWorld->stepSimulation(frame_time);
@@ -402,17 +401,16 @@ void Level1::Render()
 	//renderer_3d_->DrawMesh(Cube_GameObject);
 	//renderer_3d_->DrawMesh(ThirdCube_GameObject);
 	stateInfo->renderer_3d_->DrawMesh(enemy);
-	stateInfo->renderer_3d_->DrawMesh(enemy);
-	for (size_t i = 0; i < 10; i++)
-	{
-		stateInfo->renderer_3d_->DrawMesh(cubes[i]);
+	//for (size_t i = 0; i < 10; i++)
+	//{
+	//	stateInfo->renderer_3d_->DrawMesh(cubes[i]);
 
-	}
+	//}
 
 	stateInfo->renderer_3d_->DrawMesh(*tower);
 	tower->GetBullet()->Render();
 
-	stateInfo->renderer_3d_->DrawMesh(importedModelInstance_);
+	//stateInfo->renderer_3d_->DrawMesh(importedModelInstance_);
 	//renderer_3d_->DrawMesh(tower->GetSphereColliderMesh());
 	//renderer_3d_->DrawMesh(SecondCube_GameObject);
 
