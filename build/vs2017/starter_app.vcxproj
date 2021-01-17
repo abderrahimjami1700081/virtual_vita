@@ -249,6 +249,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|PSVita'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\VirtualVita.cpp" />
+    <ClCompile Include="SplashScreenToMenuTransitionState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Enemy.h" />
@@ -283,6 +284,7 @@
     </ClInclude>
     <ClInclude Include="..\..\VirtualVita.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SplashScreenToMenuTransitionState.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="starter_app.rc" />

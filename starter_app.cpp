@@ -62,7 +62,7 @@ void StarterApp::Init()
 
 	// FONT
 	stateInfo->font_ = new gef::Font(platform_);
-	stateInfo->font_->Load("Font/Big-Holidays");
+	stateInfo->font_->Load("Font/SplashscreenFont/Pacifico-Regular");
 
 	// INPUT MANAGER
 	stateInfo->input_manager_ = gef::InputManager::Create(platform_);

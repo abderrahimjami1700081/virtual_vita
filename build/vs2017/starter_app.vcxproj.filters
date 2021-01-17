@@ -93,6 +93,9 @@
     <ClCompile Include="..\..\TowerProjectile.cpp">
       <Filter>Source Files\MyClassesCpp</Filter>
     </ClCompile>
+    <ClCompile Include="SplashScreenToMenuTransitionState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\primitive_builder.h">
@@ -160,6 +163,9 @@
     </ClInclude>
     <ClInclude Include="..\..\TowerProjectile.h">
       <Filter>Header Files\MyClassesHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashScreenToMenuTransitionState.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

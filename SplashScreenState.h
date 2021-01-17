@@ -20,13 +20,18 @@ public:
 private:
 
 	float lerp(float _a, float _b, float _t);
-	float EasoutElastic(float x);
-	float easeInSine(float x);
+	float LinearInterpolation(float x, float t, float b, float c, float d);
+	float LinearTime(float time, float begin, float change, float duration);
+	float easeOutQuad(float x, float t, float b, float c, float d);
+
 	gef::Texture* checker_texture_;
 	gef::Sprite checker_sprite_;
 
 	gef::Texture* logo_Background_texture_;
 	gef::Sprite logo_Background_sprite_;
+
+	gef::Texture* blackBackground_texture;
+	gef::Sprite blackBackground_sprite_;
 
 	gef::Texture* logo_Background_Shadow_texture_;
 	gef::Sprite logo_Background_Shadow_sprite_;
@@ -45,5 +50,16 @@ private:
 	float TextYPos;
 	float TextYfinalPos;
 
+	float counter, percent;
+
+	float fps, duration, iterations, startPosition, endPosition,
+		distance, timeIncrement, time, position;
+	float Temp;
+
+
+	bool startTransition, isTransitionEnded;
+	float blackBackgroundAlpha;
+	float sliderPosition;
+	
 };
 

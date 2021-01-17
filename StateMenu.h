@@ -26,7 +26,29 @@ private:
 	float xp;
 	gef::Texture* background_;
 	gef::Texture* Yellow_Button_Text;
+	gef::Texture* blackSlider_Texture;
+	// checker sprite and texture 
+	gef::Texture* checker_texture_;
+	gef::Sprite checker_sprite_;
 
+
+	gef::Texture* logo_Background_Shadow_texture_;
+	gef::Sprite logo_Background_Shadow_sprite_;
+
+	gef::Texture* PlayTextButton_texture;
+	gef::Sprite PlayTextButton_sprite;
+
+
+	gef::Texture* Options_texture;
+	gef::Sprite OptionsButton_sprite;
+
+	// checker sprite and texture 
+	gef::Texture* tower_texture_;
+	gef::Sprite tower_sprite_;
+	float towerWidrth, towerHeight;
+
+
+	gef::Sprite blackSlider_Sprite;
 	gef::Sprite Play_yellow_button_sprite;
 	gef::Sprite Option_sprite;
 	gef::Sprite background_sprite;
@@ -41,8 +63,14 @@ private:
 	float menu_button_space;
 
 
+	float timer;
+	float sliderFinalPosition, sliderIncrement;
+	bool isAnimationPlaying;
 	//FONT COLOR
 	int font_color = 0xFF0000FF;
 
+	float buttonWidth, buttonHeight;
+
+	float rotationIncrement;
 };
 
