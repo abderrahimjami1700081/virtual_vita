@@ -423,10 +423,10 @@ bool StarterApp::IsColliding_SphereToSphere ( const gef::MeshInstance& meshInsta
 	gef::Sphere sphere2_transformed = sphere2.Transform ( meshInstance2.transform () );
 
 	gef::Vector4 offset = sphere1_transformed.position () - sphere2_transformed.position ();
-	float distance = sqrtf(offset.x() * offset.x() + offset.y() * offset.y() + offset.z() * offset.z());
+	//float distance = sqrtf(offset.x() * offset.x() + offset.y() * offset.y() + offset.z() * offset.z());
 	float combined_radii = sphere1_transformed.radius () + sphere2_transformed.radius ();
 
-	return distance < combined_radii;
+	return 0;
 }
 
 

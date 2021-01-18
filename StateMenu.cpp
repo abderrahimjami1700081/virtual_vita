@@ -239,6 +239,12 @@ void StateMenu::Render()
 	stateInfo->sprite_renderer_->DrawSprite(logo_Background_Shadow_sprite_);
 	stateInfo->sprite_renderer_->DrawSprite(Play_yellow_button_sprite);
 
+	stateInfo->sprite_renderer_->DrawSprite(tower_sprite_);
+	stateInfo->sprite_renderer_->DrawSprite(PlayTextButton_sprite);
+	stateInfo->sprite_renderer_->DrawSprite(OptionsButton_sprite);
+	stateInfo->sprite_renderer_->End();
+
+
 	//// The following part of the code is for rendering the Play and Options text 
 	//stateInfo->font_->RenderText(
 	//	stateInfo->sprite_renderer_,
@@ -259,10 +265,6 @@ void StateMenu::Render()
 
 	//blackSlider_Sprite.set_position(gef::Vector4(sliderIncrement, stateInfo->platform_.height() / 2, 0.0f));
 	//stateInfo->sprite_renderer_->DrawSprite(blackSlider_Sprite);
-	stateInfo->sprite_renderer_->DrawSprite(tower_sprite_);
-	stateInfo->sprite_renderer_->DrawSprite(PlayTextButton_sprite);
-	stateInfo->sprite_renderer_->DrawSprite(OptionsButton_sprite);
-	stateInfo->sprite_renderer_->End();
 
 
 }
